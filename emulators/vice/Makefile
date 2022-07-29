@@ -39,7 +39,8 @@ USE_XORG+=	xrender xinerama xi xrandr xcursor xcomposite xdamage xfixes
 HAS_CONFIGURE=	yes
 MAKE_ENV+=	XDG_DATA_DIRS=${STAGEDIR}${PREFIX}/share
 CFLAGS+=	-fcommon
-CONFIGURE_ARGS+=	--enable-ipv6 \
+CONFIGURE_ARGS+=	--prefix=${PREFIX} \
+			--enable-ipv6 \
 			--enable-external-ffmpeg \
 			--enable-x64 \
 			--disable-realdevice \
